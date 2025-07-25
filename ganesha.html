@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atharva Arts</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Helvetica;
+      background: #f2f2f2;
+      color: #333;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 10px;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: filter 0.3s ease;
+    }
+
+    /* Blur effect on non-clicked images */
+    img.blur {
+      filter: blur(4px);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .description {
+      padding: 0.75rem;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #2c3e50;
+      color: white;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* Backdrop for popup */
+    .backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.5);
+      z-index: 1000;
+    }
+
+      /* Centered image container */
+  .centered-view {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+    max-width: 80vw;
+    max-height: 80vh;
+  }
+
+      .centered-view img {
+    max-width: 100%;
+    max-height: 60vh;
+    border-radius: 8px;
+  }
+
+    .close-btn {
+    margin-top: 15px;
+    cursor: pointer;
+    color: #555;
+    font-weight: bold;
+    background: #ddd;
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: none;
+  }
+
+    .close-btn:hover {
+    background: #bbb;
+  }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Atharva Arts</h1>
+    <h4>आम्ही घेऊन आलो आहोत खास आपल्यासाठी 100% विरघळणारी व शाडू माती पासून बनवलेली घरगुती गणेश मूर्ती</h4>
+    <h4>~ बुकिंग सुरू आहे ~</h4>
+  </header>
+
+  <main>
+    <div class="gallery">
+
+   <div class="gallery-item">
+  <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0079.jpg" alt="Art 1" />
+  <div class="description">
+    <h4>No : 01</h4>
+    <hr>
+    <h4>Size : 9"inch</h4>
+  </div>
+</div>
+
+
+      <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0080.jpg" alt="Art 2">
+         <div class="description">
+    <h4>No : 02</h4>
+    <hr>
+    <h4>Size : 10"inch</h4>
+  </div>
+</div>
+
+      <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0081.jpg" alt="Art 3">
+      <div class="description">
+    <h4>No : 03</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+      <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0082.jpg" alt="Art 4">
+      <div class="description">
+    <h4>No : 04</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+      <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0078.jpg" alt="Art 5">
+      <div class="description">
+    <h4>No : 05</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+      <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0077.jpg" alt="Art 6">
+      <div class="description">
+    <h4>No : 06</h4>
+    <hr>
+    <h4>Size : 14"inch</h4>
+  </div>
+</div>
+
+      <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0083.jpg" alt="Art 7">
+       <div class="description">
+    <h4>No : 07</h4>
+    <hr>
+    <h4>Size : 18"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0084.jpg" alt="Art 8">
+      <div class="description">
+    <h4>No : 08</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0085.jpg" alt="Art 9">
+       <div class="description">
+    <h4>No : 09</h4>
+    <hr>
+    <h4>Size : 15"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0086.jpg" alt="Art 10">
+        <div class="description">
+    <h4>No : 10</h4>
+    <hr>
+    <h4>Size : 21"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0087.jpg" alt="Art 13">
+      <div class="description">
+    <h4>No : 13</h4>
+    <hr>
+    <h4>Size : 10"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0088.jpg" alt="Art 16">
+      <div class="description">
+    <h4>No : 16</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0089.jpg" alt="Art 17">
+       <div class="description">
+    <h4>No : 17</h4>
+    <hr>
+    <h4>Size : 14"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0076.jpg" alt="Art 18">
+        <div class="description">
+    <h4>No : 18</h4>
+    <hr>
+    <h4>Size : 14"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0090.jpg" alt="Art 19">
+            <div class="description">
+    <h4>No : 19</h4>
+    <hr>
+    <h4>Size : 16"inch</h4>
+  </div>
+</div>
+
+        <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0091.jpg" alt="Art 20">
+            <div class="description">
+    <h4>No : 20</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+        <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0075.jpg" alt="Art 22">
+            <div class="description">
+    <h4>No : 22</h4>
+    <hr>
+    <h4>Size : 15"inch</h4>
+  </div>
+</div>
+
+        <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0092.jpg" alt="Art 23">
+           <div class="description">
+    <h4>No : 23</h4>
+    <hr>
+    <h4>Size : 15"inch</h4>
+  </div>
+</div>
+
+        <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0093.jpg" alt="Art 24">
+           <div class="description">
+    <h4>No : 24</h4>
+    <hr>
+    <h4>Size : 16"inch</h4>
+  </div>
+</div>
+
+        <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0074.jpg" alt="Art 101">
+             <div class="description">
+    <h4>No : 101</h4>
+    <hr>
+    <h4>Size : 8"inch</h4>
+  </div>
+</div>
+
+        <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0094.jpg" alt="Art 102">
+            <div class="description">
+    <h4>No : 102</h4>
+    <hr>
+    <h4>Size : 11"inch</h4>
+  </div>
+</div>
+
+        <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0095.jpg" alt="Art 103">
+            <div class="description">
+    <h4>No : 103</h4>
+    <hr>
+    <h4>Size : 11"inch</h4>
+  </div>
+</div>
+
+        <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0073.jpg" alt="Art 104">
+            <div class="description">
+    <h4>No : 104</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+        <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0067.jpg" alt="Art 105">
+            <div class="description">
+    <h4>No : 105</h4>
+    <hr>
+    <h4>Size : 15"inch</h4>
+  </div>
+</div>
+
+        <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0068.jpg" alt="Art 106">
+            <div class="description">
+    <h4>No : 106</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+        <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0069.jpg" alt="Art 107">
+            <div class="description">
+    <h4>No : 107</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+        <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0070.jpg" alt="Art 108">
+            <div class="description">
+    <h4>No : 108</h4>
+    <hr>
+    <h4>Size : 13"inch</h4>
+  </div>
+</div>
+
+        <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0071.jpg" alt="Art 109">
+            <div class="description">
+    <h4>No : 109</h4>
+    <hr>
+    <h4>Size : 17"inch</h4>
+  </div>
+</div>
+
+        <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0072.jpg" alt="Art 151">
+          <div class="description">
+    <h4>No : 151</h4>
+    <hr>
+    <h4>Size : 10"inch</h4>
+  </div>
+</div>
+
+        <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0066.jpg" alt="Art 152">
+            <div class="description">
+    <h4>No : 152</h4>
+    <hr>
+    <h4>Size : 11"inch</h4>
+  </div>
+</div>
+
+        <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0059.jpg" alt="Art 153">
+            <div class="description">
+    <h4>No : 153</h4>
+    <hr>
+    <h4>Size : 10"inch</h4>
+  </div>
+</div>
+
+        <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0058.jpg" alt="Art 154">
+           <div class="description">
+    <h4>No : 154</h4>
+    <hr>
+    <h4>Size : 10"inch</h4>
+  </div>
+</div>
+
+        <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0060.jpg" alt="Art 155">
+            <div class="description">
+    <h4>No : 155</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0061.jpg" alt="Art 156">
+           <div class="description">
+    <h4>No : 156</h4>
+    <hr>
+    <h4>Size : 13"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0062.jpg" alt="Art 157">
+           <div class="description">
+    <h4>No : 157</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0056.jpg" alt="Art 158">
+            <div class="description">
+    <h4>No : 158</h4>
+    <hr>
+    <h4>Size : 14"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0055.jpg" alt="Art 159">
+          <div class="description">
+    <h4>No : 159</h4>
+    <hr>
+    <h4>Size : 16"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0057.jpg" alt="Art 160">
+           <div class="description">
+    <h4>No : 160</h4>
+    <hr>
+    <h4>Size : 15"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0054.jpg" alt="Art 161">
+           <div class="description">
+    <h4>No : 161</h4>
+    <hr>
+    <h4>Size : 16"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0053.jpg" alt="Art 201">
+           <div class="description">
+    <h4>No : 201</h4>
+    <hr>
+    <h4>Size : 19"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0063.jpg" alt="Art 201">
+             <div class="description">
+    <h4>No : 201</h4>
+    <hr>
+    <h4>Size : 19"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0064.jpg" alt="Art 202">
+              <div class="description">
+    <h4>No : 202</h4>
+    <hr>
+    <h4>Size : 19"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0052.jpg" alt="Art 203">
+              <div class="description">
+    <h4>No : 203</h4>
+    <hr>
+    <h4>Size : 19"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0050.jpg" alt="Art 203">
+                 <div class="description">
+    <h4>No : 203</h4>
+    <hr>
+    <h4>Size : 19"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0051.jpg" alt="Art 204">
+                 <div class="description">
+    <h4>No : 204</h4>
+    <hr>
+    <h4>Size : 20"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0065.jpg" alt="Art 205">
+                 <div class="description">
+    <h4>No : 205</h4>
+    <hr>
+    <h4>Size : 20"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0048.jpg" alt="Art 206">
+                 <div class="description">
+    <h4>No : 206</h4>
+    <hr>
+    <h4>Size : 15"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0047.jpg" alt="Art 207">
+                  <div class="description">
+    <h4>No : 207</h4>
+    <hr>
+    <h4>Size : 15"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0046.jpg" alt="Art 208">
+                 <div class="description">
+    <h4>No : 208</h4>
+    <hr>
+    <h4>Size : 14"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0045.jpg" alt="Art 209">
+                <div class="description">
+    <h4>No : 209</h4>
+    <hr>
+    <h4>Size : 14"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0044.jpg" alt="Art 210">
+                <div class="description">
+    <h4>No : 210</h4>
+    <hr>
+    <h4>Size : 15"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0043.jpg" alt="Art 211">
+                  <div class="description">
+    <h4>No : 211</h4>
+    <hr>
+    <h4>Size : 15"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0042.jpg" alt="Art 211">
+                  <div class="description">
+    <h4>No : 211</h4>
+    <hr>
+    <h4>Size : 15"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0041.jpg" alt="Art 212">
+                 <div class="description">
+    <h4>No : 212</h4>
+    <hr>
+    <h4>Size : 14"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0040.jpg" alt="Art 212">
+            <div class="description">
+    <h4>No : 212</h4>
+    <hr>
+    <h4>Size : 14"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0039.jpg" alt="Art 213">
+               <div class="description">
+    <h4>No : 213</h4>
+    <hr>
+    <h4>Size : 13"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0038.jpg" alt="Art 214">
+             <div class="description">
+    <h4>No : 214</h4>
+    <hr>
+    <h4>Size : 13"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0037.jpg" alt="Art 215">
+               <div class="description">
+    <h4>No : 215</h4>
+    <hr>
+    <h4>Size : 13"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0036.jpg" alt="Art 216">
+              <div class="description">
+    <h4>No : 216</h4>
+    <hr>
+    <h4>Size : 11"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0035.jpg" alt="Art 216">
+              <div class="description">
+    <h4>No : 216</h4>
+    <hr>
+    <h4>Size : 11"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0049.jpg" alt="Art 217">
+               <div class="description">
+    <h4>No : 217</h4>
+    <hr>
+    <h4>Size : 11"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0034.jpg" alt="Art 217">
+              <div class="description">
+    <h4>No : 217</h4>
+    <hr>
+    <h4>Size : 11"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0033.jpg" alt="Art 218">
+              <div class="description">
+    <h4>No : 218</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0032.jpg" alt="Art 219">
+               <div class="description">
+    <h4>No : 219</h4>
+    <hr>
+    <h4>Size : 10"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0030.jpg" alt="Art 219">
+               <div class="description">
+    <h4>No : 219</h4>
+    <hr>
+    <h4>Size : 10"inch</h4>
+  </div>
+</div>
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0031.jpg" alt="Art 220">
+               <div class="description">
+    <h4>No : 220</h4>
+    <hr>
+    <h4>Size : 10"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0029.jpg" alt="Art 221">
+               <div class="description">
+    <h4>No : 221</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0028.jpg" alt="Art 222">
+              <div class="description">
+    <h4>No : 222</h4>
+    <hr>
+    <h4>Size : 11"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0027.jpg" alt="Art 223">
+              <div class="description">
+    <h4>No : 223</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0026.jpg" alt="Art 224">
+              <div class="description">
+    <h4>No : 224</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0025.jpg" alt="Art 225">
+              <div class="description">
+    <h4>No : 225</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0024.jpg" alt="Art 226">
+               <div class="description">
+    <h4>No : 226</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0023.jpg" alt="Art 227">
+              <div class="description">
+    <h4>No : 227</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0022.jpg" alt="Art 228">
+               <div class="description">
+    <h4>No : 228</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0019.jpg" alt="Art 228">
+               <div class="description">
+    <h4>No : 228</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0020.jpg" alt="Art 229">
+             <div class="description">
+    <h4>No : 229</h4>
+    <hr>
+    <h4>Size : 11"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0021.jpg" alt="Art 230">
+              <div class="description">
+    <h4>No : 230</h4>
+    <hr>
+    <h4>Size : 13"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0018.jpg" alt="Art 231">
+               <div class="description">
+    <h4>No : 231</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0017.jpg" alt="Art 232">
+              <div class="description">
+    <h4>No : 232</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0016.jpg" alt="Art 233">
+               <div class="description">
+    <h4>No : 233</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0015.jpg" alt="Art 233">
+                  <div class="description">
+    <h4>No : 233</h4>
+    <hr>
+    <h4>Size : 12"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0014.jpg" alt="Art 234">
+                  <div class="description">
+    <h4>No : 234</h4>
+    <hr>
+    <h4>Size : 11"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0012.jpg" alt="Art 235">
+               <div class="description">
+    <h4>No : 235</h4>
+    <hr>
+    <h4>Size : 09"inch</h4>
+  </div>
+</div>
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0011.jpg" alt="Art 236">
+                  <div class="description">
+    <h4>No : 236</h4>
+    <hr>
+    <h4>Size : 10"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0010.jpg" alt="Art 237">
+                   <div class="description">
+    <h4>No : 237</h4>
+    <hr>
+    <h4>Size : 10"inch</h4>
+  </div>
+</div>
+
+       <div class="gallery-item">
+        <img src="C:\Users\Admin\OneDrive\Desktop\Ganpati ji\IMG-20250724-WA0013.jpg" alt="Art 238">
+                  <div class="description">
+    <h4>No : 238</h4>
+    <hr>
+    <h4>Size : 11"inch</h4>
+  </div>
+</div>
+
+
+
+    </div>
+  </main>
+
+  <footer>
+    <h3>पत्ता : गाळा नं - 6, सरदार संकुल, पितळी गणपती समोर, ताराबाई पार्क कोल्हापूर</h3>
+    <h3>संपर्क : प्रमोद कुंभार </h3>
+    <h3> मो : 9421182271</h3>
+  </footer>
+
+  <script>
+    const gallery = document.querySelector('.gallery');
+    let centeredView = null;
+    let backdrop = null;
+
+    gallery.addEventListener('click', (e) => {
+      if (e.target.tagName !== 'IMG') return;
+
+      const clickedImg = e.target;
+      const galleryItems = gallery.querySelectorAll('img');
+
+      // Blur all images except the clicked one
+      galleryItems.forEach(img => {
+        if (img !== clickedImg) {
+          img.classList.add('blur');
+        }
+      });
+
+      // Create backdrop
+      backdrop = document.createElement('div');
+      backdrop.classList.add('backdrop');
+      document.body.appendChild(backdrop);
+
+      // Create centered view container
+      centeredView = document.createElement('div');
+      centeredView.classList.add('centered-view');
+
+      // Clone clicked image for smaller display
+      const largeImg = clickedImg.cloneNode();
+      largeImg.style.cursor = 'default';
+
+      // Get description text (next sibling p.description)
+      const descText = clickedImg.parentElement.querySelector('.description').textContent;
+
+      // Description element
+      const desc = document.createElement('p');
+      desc.className = 'description';
+      desc.textContent = descText;
+
+      // Close button
+      const closeBtn = document.createElement('button');
+      closeBtn.className = 'close-btn';
+      closeBtn.textContent = 'Close';
+
+      closeBtn.addEventListener('click', closeCenteredView);
+      backdrop.addEventListener('click', closeCenteredView);
+
+      centeredView.appendChild(largeImg);
+      centeredView.appendChild(desc);
+      centeredView.appendChild(closeBtn);
+
+      document.body.appendChild(centeredView);
+      // Prevent scrolling when popup open
+      document.body.style.overflow = 'hidden';
+    });
+
+    function closeCenteredView() {
+      // Remove blur
+      const galleryItems = gallery.querySelectorAll('img.blur');
+      galleryItems.forEach(img => img.classList.remove('blur'));
+
+      // Remove popup and backdrop
+      if (centeredView) {
+        centeredView.remove();
+        centeredView = null;
+      }
+      if (backdrop) {
+        backdrop.remove();
+        backdrop = null;
+      }
+
+      // Restore scrolling
+      document.body.style.overflow = '';
+    }
+  </script>
+</body>
+</html>
